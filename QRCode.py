@@ -11,8 +11,8 @@ def qr_code_link(picture,url):
     width_percent=(width_base/float(logo.size[0]))
     size=int((float(logo.size[1])*float(width_percent)))
     logo=logo.resize((width_base,size),Image.ANTIALIAS)
+    #link to QR code
     link_code = url
-    #link for QR code
     code_specs = qrcode.QRCode(version=1,box_size=10,border=5)
     code_specs.add_data(link_code)
     code_specs.make(fit=True)
